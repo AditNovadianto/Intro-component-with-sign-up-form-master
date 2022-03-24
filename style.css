@@ -58,9 +58,7 @@ body {
 }
 
 .container .content .register {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  max-width: 500px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -77,7 +75,8 @@ body {
   font-family: "Poppins", sans-serif;
   display: block;
   margin: auto;
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
   padding: 10px 20px;
   margin-top: 30px;
   border-radius: 5px;
@@ -91,8 +90,8 @@ body {
 .container .content .register input.error ~ img {
   display: block;
   position: absolute;
-  -webkit-transform: translateX(400px) translateY(-35px);
-          transform: translateX(400px) translateY(-35px);
+  -webkit-transform: translateX(350px) translateY(-35px);
+          transform: translateX(350px) translateY(-35px);
 }
 
 .container .content .register input.error ~ .error-text {

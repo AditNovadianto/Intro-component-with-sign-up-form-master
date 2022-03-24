@@ -54,7 +54,8 @@ body {
     }
 
     .register {
-      width: max-content;
+      // width: max-content;
+      max-width: 500px;
       height: max-content;
       background-color: white;
       margin-top: 30px;
@@ -67,7 +68,8 @@ body {
         font-family: $font-primary;
         display: block;
         margin: auto;
-        width: 400px;
+        width: 90%;
+        max-width: 400px;
         padding: 10px 20px;
         margin-top: 30px;
         border-radius: 5px;
@@ -80,7 +82,7 @@ body {
             img {
               display: block;
               position: absolute;
-              transform: translateX(400px) translateY(-35px);
+              transform: translateX(350px) translateY(-35px);
             }
 
             .error-text {
