@@ -1,0 +1,215 @@
+$font-primary: "Poppins", sans-serif;
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$Dark-Blue: hsl(249, 10%, 26%);
+$Grayish-Blue: hsl(246, 25%, 77%);
+
+body {
+  background-image: url(images/bg-intro-desktop.png);
+  background-color: $Red;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+
+  .title {
+    width: 550px;
+
+    h1 {
+      font-size: 45px;
+      font-family: $font-primary;
+      color: white;
+    }
+
+    p {
+      font-size: 16px;
+      font-family: $font-primary;
+      color: white;
+    }
+  }
+
+  .content {
+    .try-free {
+      padding: 1px 80px;
+      background-color: $Blue;
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px hsla(249, 10%, 26%, 0.5);
+
+      p {
+        font-size: 14px;
+        font-family: $font-primary;
+        color: white;
+        text-align: center;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .register {
+      width: max-content;
+      height: max-content;
+      background-color: white;
+      margin-top: 30px;
+      padding: 15px 30px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      position: relative;
+
+      input {
+        font-family: $font-primary;
+        display: block;
+        margin: auto;
+        width: 400px;
+        padding: 10px 20px;
+        margin-top: 30px;
+        border-radius: 5px;
+        border: 1px solid hsla(249, 10%, 26%, 0.5);
+
+        &.error {
+          border: 2px solid $Red;
+
+          & ~ {
+            img {
+              display: block;
+              position: absolute;
+              transform: translateX(400px) translateY(-35px);
+            }
+
+            .error-text {
+              margin-top: 0px;
+              display: block;
+              color: $Red;
+              text-align: end;
+              font-style: italic;
+            }
+          }
+        }
+      }
+
+      img {
+        display: none;
+      }
+
+      .error-text {
+        display: none;
+      }
+
+      button {
+        font-family: $font-primary;
+        display: block;
+        margin: auto;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: white;
+        background-color: $Green;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 3px 5px hsla(249, 10%, 26%, 0.5);
+      }
+
+      button:active {
+        box-shadow: inset 0px 10px 100px rgba(255, 255, 255, 0.5);
+      }
+
+      p {
+        font-size: 11px;
+        font-family: $font-primary;
+        text-align: center;
+        color: $Grayish-Blue;
+        margin-bottom: 20px;
+
+        a {
+          font-weight: bold;
+          color: $Red;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+
+      &.error {
+        animation: shake 0.5s ease;
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(10px) rotate(0.5deg);
+  }
+
+  30% {
+    transform: translateX(-10px) rotate(-0.5deg);
+  }
+
+  50% {
+    transform: translateX(10px) rotate(0.5deg);
+  }
+
+  70% {
+    transform: translateX(-10px) rotate(-0.5deg);
+  }
+
+  100% {
+    transform: translateX(10px) rotate(0.5deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: block;
+
+    .title {
+      width: 350px;
+      margin: auto;
+
+      h1 {
+        font-size: 35px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+
+    .content {
+      .try-free {
+        padding: 10px 40px;
+        width: max-content;
+        margin: auto;
+      }
+
+      .register {
+        input {
+          width: 320px;
+
+          &.error {
+            border: 2px solid $Red;
+
+            & ~ {
+              img {
+                display: block;
+                position: absolute;
+                transform: translateX(320px) translateY(-35px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
