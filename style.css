@@ -236,4 +236,39 @@ body {
             transform: translateX(320px) translateY(-35px);
   }
 }
+
+@media screen and (max-width: 375px) {
+  .container .title {
+    width: 300px;
+  }
+  .container .content .try-free {
+    padding: 10px 20px;
+    width: 60%;
+    margin-bottom: 30px;
+  }
+  .container .content .register {
+    margin: auto;
+  }
+  .container .content .register input {
+    width: 250px;
+  }
+  .container .content .register input.error {
+    border: 2px solid #ff7a7a;
+  }
+  .container .content .register input.error ~ img {
+    display: block;
+    position: absolute;
+    -webkit-transform: translateX(250px) translateY(-35px);
+            transform: translateX(250px) translateY(-35px);
+  }
+  .container .content .register button {
+    width: 80%;
+  }
+  .container .content .register p {
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

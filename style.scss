@@ -213,3 +213,50 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 375px) {
+  .container {
+    .title {
+      width: 300px;
+    }
+
+    .content {
+      .try-free {
+        padding: 10px 20px;
+        width: 60%;
+        margin-bottom: 30px;
+      }
+
+      .register {
+        margin: auto;
+
+        input {
+          width: 250px;
+
+          &.error {
+            border: 2px solid $Red;
+
+            & ~ {
+              img {
+                display: block;
+                position: absolute;
+                transform: translateX(250px) translateY(-35px);
+              }
+            }
+          }
+        }
+
+        button {
+          width: 80%;
+        }
+
+        p {
+          width: 250px;
+          margin: auto;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
